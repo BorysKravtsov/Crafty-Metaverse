@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'HeliosExtC-Bold';
-  src: url('fonts/HeliosExtC-Bold.woff2') format('woff');
+  src: url('../fonts/HeliosExtC-Bold.woff2') format('woff');
 }
 @font-face {
   font-family: 'HeliosBlackC';
-  src: url('fonts/HeliosBlackC.woff2') format('woff');
+  src: url('../fonts/HeliosBlackC.woff2') format('woff');
 }
 
 @mixin fontJakarta-medium($fontSize: 20px, $color: #fff) {

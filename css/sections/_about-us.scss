@@ -1,5 +1,5 @@
 .about-us {
-  background-image: url(/src/images/About-us/about-bg.jpg);
+  background-image: url(images/About-us/about-bg.jpg);
   height: 100vh;
   min-height: 800px;
   background-repeat: no-repeat;
@@ -31,7 +31,7 @@
     width: 100%;
     max-width: 447px;
     background-repeat: no-repeat;
-    background-image: url(/src/images/About-us/about-us-title-bg.svg);
+    background-image: url(images/About-us/about-us-title-bg.svg);
     z-index: -2;
   }
   &__inner::after {
@@ -98,7 +98,7 @@
     top: -15px;
     left: 0px;
     position: absolute;
-    background-image: url(/src/images/About-us/circle.svg);
+    background-image: url(images/About-us/circle.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -113,7 +113,7 @@
     left: calc(100% - 54px);
   }
   &__bg-image-resp {
-    background-image: url(/src/images/About-us/about-bg.jpg);
+    background-image: url(images/About-us/about-bg.jpg);
     display: none;
     width: 100%;
     height: 100%;
@@ -174,4 +174,3 @@
     }
   }
 }
-
