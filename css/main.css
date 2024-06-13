@@ -6,11 +6,11 @@
 
 @font-face {
   font-family: "HeliosExtC-Bold";
-  src: url("/src/fonts/HeliosExtC-Bold.woff2") format("woff");
+  src: url("../fonts/HeliosExtC-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "HeliosBlackC";
-  src: url("/src/fonts/HeliosBlackC.woff2") format("woff");
+  src: url("../fonts/HeliosBlackC.woff2") format("woff2");
 }
 body {
   background-color: black;
@@ -297,7 +297,7 @@ p {
   }
 }
 .home-page {
-  background-image: url(/src/images/home-page-bg.png);
+  background-image: url(../images/home-page-bg.png);
   height: 100vh;
   min-height: 600px;
   background-repeat: no-repeat;
@@ -325,7 +325,7 @@ p {
   width: 100%;
   max-width: 447px;
   background-repeat: no-repeat;
-  background-image: url(/src/images/home-page-title-bg.svg);
+  background-image: url(../images/home-page-title-bg.svg);
   z-index: -2;
 }
 .home-page__inner::after {
@@ -446,7 +446,7 @@ p {
   }
 }
 .about-us {
-  background-image: url(/src/images/About-us/about-bg.jpg);
+  background-image: url(../images/About-us/about-bg.jpg);
   height: 100vh;
   min-height: 800px;
   background-repeat: no-repeat;
@@ -481,7 +481,7 @@ p {
   width: 100%;
   max-width: 447px;
   background-repeat: no-repeat;
-  background-image: url(/src/images/About-us/about-us-title-bg.svg);
+  background-image: url(../images/About-us/about-us-title-bg.svg);
   z-index: -2;
 }
 .about-us__inner::after {
@@ -557,7 +557,7 @@ p {
   top: -15px;
   left: 0px;
   position: absolute;
-  background-image: url(/src/images/About-us/circle.svg);
+  background-image: url(../images/About-us/circle.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -572,7 +572,7 @@ p {
   left: calc(100% - 54px);
 }
 .about-us__bg-image-resp {
-  background-image: url(/src/images/About-us/about-bg.jpg);
+  background-image: url(../images/About-us/about-bg.jpg);
   display: none;
   width: 100%;
   height: 100%;
@@ -749,7 +749,7 @@ p {
 .roadmap .block__list li::before {
   position: absolute;
   content: "";
-  background-image: url(/src/images/Roadmap/ul-icon.svg);
+  background-image: url(../images/Roadmap/ul-icon.svg);
   top: 0;
   left: -37px;
   height: 24px;
@@ -872,7 +872,7 @@ p {
 }
 .brands {
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(36, 10, 92, 0.63) 8.97%, rgba(36, 11, 88, 0.3) 100%), url(/src/images/Brands/bg-lines.png);
+  background: linear-gradient(180deg, rgba(36, 10, 92, 0.63) 8.97%, rgba(36, 11, 88, 0.3) 100%), url(../images/Brands/bg-lines.png);
   background-repeat: repeat;
 }
 .brands h3 {
@@ -1029,7 +1029,7 @@ p {
   height: 537px;
   left: 0;
   top: 0;
-  background: linear-gradient(268.83deg, rgba(58, 78, 255, 0) -0.39%, rgba(216, 58, 255, 0.1) 102.63%), url(/src/images/Resources/bg-lines.svg);
+  background: linear-gradient(268.83deg, rgba(58, 78, 255, 0) -0.39%, rgba(216, 58, 255, 0.1) 102.63%), url(../images/Resources/bg-lines.svg);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
   z-index: -1;
@@ -1269,7 +1269,7 @@ p {
   position: absolute;
   top: -1650px;
   left: -200px;
-  background-image: url(/src/images/Game/big-ticker-bg.svg);
+  background-image: url(../images/Game/big-ticker-bg.svg);
   height: 288px;
   font-family: "HeliosExtC-Bold", sans-serif;
   color: #fff;
@@ -1335,7 +1335,7 @@ p {
 .game {
   overflow: hidden;
   position: relative;
-  background-image: url(/src/images/Game/game-bg.jpg);
+  background-image: url(../images/Game/game-bg.jpg);
   min-height: 1069px;
   background-repeat: no-repeat;
   background-position: center;
@@ -1388,7 +1388,7 @@ p {
   position: absolute;
   height: 674px;
   width: 644px;
-  background: linear-gradient(0deg, rgba(58, 78, 255, 0) 0%, rgba(156, 58, 255, 0.14) 100%), url(/src/images/Game/info-bg-lines.svg);
+  background: linear-gradient(0deg, rgba(58, 78, 255, 0) 0%, rgba(156, 58, 255, 0.14) 100%), url(../images/Game/info-bg-lines.svg);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   z-index: -1;
@@ -1600,7 +1600,7 @@ p {
   left: 0;
   height: 452px;
   width: 952px;
-  background: linear-gradient(-90deg, rgba(58, 78, 255, 0) 0%, rgba(156, 58, 255, 0.14) 100%), url(/src/images/Explore/explore-bg-lines.svg);
+  background: linear-gradient(-90deg, rgba(58, 78, 255, 0) 0%, rgba(156, 58, 255, 0.14) 100%), url(../images/Explore/explore-bg-lines.svg);
   background-repeat: no-repeat;
   z-index: 0;
 }
@@ -1683,7 +1683,7 @@ p {
   right: 0;
   height: 360px;
   width: 1168px;
-  background: linear-gradient(-90deg, rgba(58, 78, 255, 0) 0%, rgba(156, 58, 255, 0.14) 100%), url(/src/images/Explore/explore-bg-lines.svg);
+  background: linear-gradient(-90deg, rgba(58, 78, 255, 0) 0%, rgba(156, 58, 255, 0.14) 100%), url(../images/Explore/explore-bg-lines.svg);
   background-repeat: no-repeat;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
