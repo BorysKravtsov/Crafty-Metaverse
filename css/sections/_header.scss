@@ -1,0 +1,177 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  background: transparent;
+  li {
+    @include fontJakarta-medium(20px);
+  }
+  &.scrolled {
+    backdrop-filter: blur(6px);
+    background-color: rgba(41, 44, 52, 0.3);
+    max-width: 100%;
+
+    z-index: 1000;
+  }
+  &__logo {
+    margin-right: 30px;
+  }
+  &__inner {
+    width: 100%;
+    height: 100%;
+    @include flex(space-between);
+  }
+
+  &__nav-bar {
+    @include flex(space-between);
+    max-width: 880px;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+      opacity: 70%;
+      position: relative;
+    }
+
+    a:hover {
+      opacity: 100%;
+    }
+
+    a::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      border-radius: 2px;
+      transition: width 0.3s;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: #fff;
+      box-shadow: 0px 0px 7px rgba(255, 255, 255, 0.33);
+    }
+
+    a:hover::after {
+      width: 50%;
+      background-color: #fff;
+      box-shadow: 0px 0px 7px rgba(255, 255, 255, 0.33);
+    }
+
+    .active a::after {
+      width: 100%;
+      background-color: #00dbde;
+      box-shadow: 0px 0px 7px rgba(41, 183, 227, 0.33);
+    }
+
+    .active {
+      opacity: 100%;
+    }
+  }
+
+  .nav {
+    @include flex(space-between);
+    width: 100%;
+    &__items {
+      @include flex(space-between);
+      max-width: 880px;
+      width: 100%;
+    }
+  }
+
+  &__account {
+    @include flex(space-between);
+    margin-left: 35px;
+    min-width: 92px;
+  }
+
+  .menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+    overflow-y: auto;
+
+    .menu__container {
+      @include flex(space-between, center, column);
+      min-height: 500px;
+      margin-top: 50px;
+    }
+
+    .nav__items {
+      @include flex(space-between, flex-start, column);
+      min-height: 435px;
+
+      a {
+        margin-left: 20px;
+      }
+    }
+
+    .header__account-resp {
+      @include flex(space-between);
+      min-width: 100px;
+    }
+  }
+  .menu-active {
+    transform: translateX(0);
+  }
+
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+  .burger img,
+  .menu__close img {
+    transition: transform 0.5s ease;
+  }
+
+  .menu__close {
+    display: none;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    li {
+      font-size: 16px;
+    }
+    &__nav-bar {
+      max-width: 768px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__nav-bar {
+      width: 0;
+      justify-content: flex-end;
+    }
+    .nav {
+      display: none;
+      &__items {
+        margin-top: 140px;
+      }
+    }
+    .burger {
+      display: block;
+    }
+    .menu {
+      display: block;
+    }
+  }
+  .header .burger.changed {
+    display: none;
+  }
+  .header .menu__close.changed {
+    display: block;
+  }
+}

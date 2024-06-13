@@ -1,0 +1,289 @@
+.res {
+  overflow: hidden;
+  position: relative;
+  background-color: #090812;
+  z-index: 0;
+  height: 1260px;
+
+  .title__small {
+    padding: 90px 0 22px;
+  }
+
+  .btn {
+    padding: 17px 35px;
+  }
+
+  &__about {
+    @include flex(space-between, center);
+  }
+
+  &__about-token {
+    @include flex(space-between, center, column);
+    min-height: 537px;
+    max-width: 633px;
+    position: relative;
+    padding: 73px 0 45px 110px;
+  }
+
+  &__about-token::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 537px;
+    left: 0;
+    top: 0;
+    background: #bf3aff;
+    box-shadow: 0px 0px 17px rgba(191, 58, 255, 0.4);
+    border-radius: 41px;
+  }
+
+  &__about-token::after {
+    content: '';
+    position: absolute;
+    width: 633px;
+    height: 537px;
+    left: 0;
+    top: 0;
+    background: linear-gradient(
+        268.83deg,
+        rgba(58, 78, 255, 0) -0.39%,
+        rgba(216, 58, 255, 0.1) 102.63%
+      ),
+      url(/src/images/Resources/bg-lines.svg);
+    backdrop-filter: blur(3px);
+    z-index: -1;
+  }
+
+  .block-title {
+    @include fontHeliosExtC(35px);
+    text-transform: uppercase;
+    line-height: 109%;
+  }
+
+  .block-text {
+    @include fontJakarta-regular(20px);
+    font-weight: 300;
+    line-height: 160%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    opacity: 70%;
+    min-width: 566px;
+  }
+
+  &__glow-logo {
+    overflow: inherit;
+    position: relative;
+    height: 844px;
+    width: 877px;
+    @include fontJakarta-regular(20px);
+    color: rgba($color: #ffffff, $alpha: 0.7);
+    font-weight: 500;
+    line-height: 160%;
+    text-align: start;
+  }
+
+  .glow-logo {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .info-circles {
+    position: relative;
+    max-width: 877px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .circ-supply,
+  .max-supply,
+  .tax {
+    @include flex();
+    img {
+      margin: 0 10px 15px 0;
+    }
+  }
+
+  .tax img {
+    margin: 0 10px 44px 0;
+  }
+
+  .symbol img {
+    margin: 0 6px 23px 0;
+  }
+
+  .circ-supply {
+    position: absolute;
+    top: 119px;
+    left: 195px;
+  }
+
+  .max-supply {
+    position: absolute;
+    top: 243px;
+    right: 1%;
+  }
+
+  .tax {
+    position: absolute;
+    top: 460px;
+    right: 1%;
+  }
+
+  .symbol {
+    position: absolute;
+    top: 561px;
+    left: 93px;
+  }
+
+  .blur {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .e910 {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+@media (max-width: 1440px) {
+  .res {
+    &__about-token {
+      @include flex(space-between, flex-start, column);
+      min-height: 537px;
+      max-width: 633px;
+      position: relative;
+      padding: 73px 0 45px 80px;
+    }
+
+    .block-title {
+      font-size: 24px;
+    }
+
+    .block-text {
+      text-align: left;
+      max-width: 400px;
+      min-width: 400px;
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .res {
+    padding-bottom: 100px;
+    height: 100%;
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    &__about {
+      @include flex(space-between, center, column-reverse);
+    }
+
+    &__glow-logo {
+      height: calc(844px / 1.3);
+      width: calc(877px / 1.3);
+    }
+    .info-circles {
+      width: 100%;
+    }
+    .tax {
+      flex-direction: row-reverse;
+      text-align: right;
+      top: 440px;
+      img {
+        margin-left: 11px;
+      }
+    }
+
+    .max-supply {
+      flex-direction: row-reverse;
+      text-align: right;
+      top: 221px;
+      img {
+        margin-left: 11px;
+      }
+    }
+
+    .symbol {
+      top: 469px;
+    }
+
+    .blur {
+      .e910 {
+        left: -50%;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .res {
+    &__about-token {
+      padding: 45px 0 100px 26px;
+      img {
+        height: 31px;
+        width: 31px;
+      }
+    }
+
+    .block-title {
+      max-width: 270px;
+    }
+
+    .block-text {
+      font-size: 16px;
+      min-width: 310px;
+      max-width: 310px;
+    }
+
+    &__glow-logo {
+      font-size: 12px;
+      height: calc(844px / 1.68);
+      width: calc(877px / 1.68);
+      img {
+        height: 31px;
+        width: 31px;
+      }
+    }
+
+    .circ-supply,
+    .max-supply,
+    .tax {
+      img {
+        margin: 0 10px 15px 0;
+      }
+    }
+
+    .circ-supply {
+      top: 79px;
+      left: 130px;
+    }
+    .max-supply {
+      top: 169px;
+      right: 20%;
+    }
+    .tax {
+      top: 320px;
+      right: 20%;
+    }
+
+    .symbol {
+      top: 360px;
+    }
+  }
+}

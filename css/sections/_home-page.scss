@@ -1,0 +1,142 @@
+.home-page {
+  background-image: url(/src/images/home-page-bg.png);
+  height: 100vh;
+  min-height: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding: 110px 0;
+  position: relative;
+  z-index: -1000;
+  &__inner {
+    position: relative;
+    z-index: 2;
+    margin: auto 0;
+    height: 476px;
+    width: 100%;
+  }
+
+  &__inner::before {
+    content: '';
+    top: 0;
+    left: -58px;
+    position: absolute;
+    height: 477px;
+    width: 100%;
+    max-width: 447px;
+    background-repeat: no-repeat;
+    background-image: url(/src/images/home-page-title-bg.svg);
+    z-index: -2;
+  }
+  &__inner::after {
+    content: '';
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    max-height: 475px;
+    height: 100%;
+    width: 6px;
+    background-color: #7f5cff;
+    box-shadow: 0px 0px 17px rgba(191, 58, 255, 0.4);
+    border-radius: 41px;
+  }
+  &__title {
+    margin: auto 0;
+    height: 100%;
+    width: 100%;
+    @include flex(space-between, flex-start, column);
+    padding: 17px 0 20px 65px;
+  }
+  .star {
+    display: inline;
+  }
+  .star-resp {
+    display: none;
+  }
+  & .container {
+    width: 100%;
+    @include flex(center, center);
+  }
+
+  .title__main {
+    margin-bottom: 69px;
+    @include fontHeliosExtC(48px);
+    line-height: 140%;
+    max-width: 753px;
+  }
+}
+.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -500;
+  .e239,
+  .r30,
+  .r29,
+  .r31,
+  .e240 {
+    position: absolute;
+    z-index: -500;
+  }
+  .e239 {
+    left: -750px;
+    top: -535px;
+  }
+  .r30 {
+    left: 0;
+    top: 0;
+  }
+  .r29 {
+    bottom: -240px;
+    left: -12px;
+  }
+  .r31 {
+    bottom: -300px;
+    left: -267px;
+  }
+  .e240 {
+    bottom: -413px;
+    right: -400px;
+  }
+}
+@media (max-width: 1024px) {
+  .home-page {
+    &__title {
+      padding-left: 40px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .home-page {
+    max-height: 800px;
+    &__inner {
+      height: 341px;
+    }
+    &__inner::before {
+      height: 341px;
+    }
+    &__title {
+      max-width: 354px;
+      padding-left: 20px;
+    }
+    .title__main {
+      margin-bottom: 0;
+      font-size: 26px;
+      img {
+        height: 26px;
+        width: 26px;
+      }
+    }
+    .star {
+      display: none;
+    }
+    .star-resp {
+      display: inline;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'HeliosExtC-Bold';
+  src: url('fonts/HeliosExtC-Bold.woff2') format('woff');
+}
+@font-face {
+  font-family: 'HeliosBlackC';
+  src: url('fonts/HeliosBlackC.woff2') format('woff');
+}
+
+@mixin fontJakarta-medium($fontSize: 20px, $color: #fff) {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: $color;
+  font-size: $fontSize;
+  font-weight: 500;
+  text-transform: none;
+}
+@mixin fontJakarta-regular($fontSize: 20px, $color: #fff) {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: $color;
+  font-size: $fontSize;
+  font-weight: 400;
+  text-transform: none;
+}
+@mixin fontHeliosExtC($fontSize: 20px, $color: #fff) {
+  font-family: 'HeliosExtC-Bold', sans-serif;
+  color: $color;
+  font-size: $fontSize;
+  text-transform: none;
+}
+@mixin HeliosBlackC($fontSize: 20px, $color: #fff) {
+  font-family: 'HeliosBlackC', sans-serif;
+  color: $color;
+  font-size: $fontSize;
+  text-transform: none;
+}
+
+@mixin flex($jc: center, $ai: center, $fd: row) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+}

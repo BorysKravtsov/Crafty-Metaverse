@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+@import 'attachments/_variables';
+@import 'attachments/_mixins';
+@import 'sections/_general';
+@import 'sections/_header';
+@import 'sections/_home-page';
+@import 'sections/_about-us';
+@import 'sections/_roadmap';
+@import 'sections/_brands';
+@import 'sections/_res';
+@import 'sections/_ticker';
+@import 'sections/_game';
+@import 'sections/_explore';
