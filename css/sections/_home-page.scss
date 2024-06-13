@@ -1,5 +1,5 @@
 .home-page {
-  background-image: url(images/home-page-bg.png);
+  background-image: url(../images/home-page-bg.png);
   height: 100vh;
   min-height: 600px;
   background-repeat: no-repeat;
@@ -27,7 +27,7 @@
     width: 100%;
     max-width: 447px;
     background-repeat: no-repeat;
-    background-image: url(images/home-page-title-bg.svg);
+    background-image: url(../images/home-page-title-bg.svg);
     z-index: -2;
   }
   &__inner::after {
