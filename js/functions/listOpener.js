@@ -13,10 +13,10 @@ export function initListOpener() {
       if (textContent && textContent.classList.contains('faq__list-text')) {
         if (textContent.style.display === 'block') {
           textContent.style.display = 'none';
-          icon.src = '../images/FAQ/plus-icon.svg';
+          icon.src = 'images/FAQ/plus-icon.svg';
         } else {
           textContent.style.display = 'block';
-          icon.src = '../images/FAQ/minus-icon.svg';
+          icon.src = 'images/FAQ/minus-icon.svg';
         }
       } else {
         console.error('Element .faq__list-text not found.');
