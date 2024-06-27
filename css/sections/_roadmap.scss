@@ -1,10 +1,11 @@
 .roadmap {
   padding-top: 216px;
   background-color: #090812;
-  height: 2400px;
+  height: 2429px;
   position: relative;
   overflow: hidden;
   z-index: 1;
+
   h2,
   h3 {
     text-align: center;
@@ -39,7 +40,7 @@
 
   .q1,
   .q2 {
-    min-height: 413px;
+    min-height: 438px;
   }
 
   .q1 ul,
@@ -50,7 +51,7 @@
   }
 
   .q1 ul {
-    max-height: 251px;
+    max-height: 298px;
   }
   .q1 li,
   .q2 li {
@@ -154,6 +155,43 @@
     top: 1175px;
     left: 25px;
   }
+
+  .blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -500;
+
+    .e251,
+    .e252,
+    .e253,
+    .e254 {
+      position: absolute;
+      z-index: -500;
+    }
+
+    .e251 {
+      left: -590px;
+      top: -235px;
+    }
+
+    .e252 {
+      bottom: 0;
+      right: -550px;
+    }
+    .e253 {
+      display: none;
+    }
+
+    .e254 {
+      display: none;
+      bottom: 0;
+      right: -550px;
+    }
+  }
 }
 
 @media (max-width: 1200px) {
@@ -184,6 +222,7 @@
 
     .moreBtn {
       font-size: 16px;
+      text-align: left;
     }
 
     &__bg {
@@ -225,6 +264,28 @@
 
     .q4 .block__list {
       min-height: 180px;
+    }
+    .blur {
+      .e251 {
+        left: -810px;
+        top: -645px;
+      }
+
+      .e252 {
+        bottom: -600px;
+        right: -730px;
+      }
+      .e253 {
+        display: block;
+        right: 590px;
+        top: -235px;
+      }
+
+      .e254 {
+        display: block;
+        bottom: 0;
+        right: -550px;
+      }
     }
   }
 }

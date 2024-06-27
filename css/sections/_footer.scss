@@ -1,0 +1,88 @@
+.footer {
+  @include flex(flex-start);
+  background-color: #090812;
+  border-top: solid 1px rgba(255, 255, 255, 0.6);
+  position: relative;
+  height: 295px;
+  overflow: hidden;
+  &__inner {
+    @include flex(space-between, center);
+    max-width: 880px;
+    width: 100%;
+    z-index: 10;
+  }
+
+  &__global {
+    margin-left: 75px;
+    min-height: 145px;
+    @include flex(space-between, flex-start, column);
+  }
+
+  &__global-text {
+    @include fontJakarta-regular(18px);
+    line-height: 140%;
+  }
+
+  &__contact1,
+  &__contact2 {
+    display: block;
+    @include fontJakarta-medium(18px);
+    line-height: 140%;
+    padding: 61px 71px;
+    border: solid 1px rgba(255, 255, 255, 0.6);
+    transition: 1s;
+  }
+
+  &__contact1:hover,
+  &__contact2:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #090812;
+  }
+
+  &__contact1 {
+    border: solid 1px rgba(255, 255, 255, 0.6);
+    border-top: none;
+    border-bottom: none;
+  }
+
+  &__contact2 {
+    border: solid 1px rgba(255, 255, 255, 0.6);
+    border-bottom: none;
+  }
+
+  .blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    .blur-1 {
+      position: absolute;
+      left: -150px;
+      top: -35px;
+    }
+
+    .blur-2 {
+      position: absolute;
+      left: 320px;
+      top: -45px;
+    }
+
+    .blur-3 {
+      position: absolute;
+      left: 1040px;
+      top: -25px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    &__global {
+      margin-left: 20px;
+    }
+  }
+}

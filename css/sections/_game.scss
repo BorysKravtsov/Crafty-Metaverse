@@ -1,5 +1,5 @@
 .game {
-  overflow: hidden;
+  z-index: 100;
   position: relative;
   background-image: url(../images/Game/game-bg.jpg);
   min-height: 1069px;
@@ -7,6 +7,7 @@
   background-position: center;
   background-size: cover;
   @include flex(center, center);
+  flex-wrap: wrap;
   &__content {
     padding-top: 230px;
   }
@@ -112,6 +113,81 @@
     right: -500px;
     top: 100px;
   }
+
+  .ticker {
+    position: absolute;
+    background-image: url(../images/Resources/big-ticker-bg.png);
+    background-size: contain;
+    background-position: center;
+    z-index: 100;
+    top: -200px;
+    padding-block: 8px;
+    overflow: hidden;
+    user-select: none;
+    transform: rotate(-9deg) translateX(-60px);
+    --gap: 20px;
+    display: flex;
+    gap: var(--gap);
+    min-height: 288px;
+    backdrop-filter: blur(6px);
+    background-color: rgba(41, 44, 52, 0.3);
+
+    &__text {
+      z-index: 100;
+      @include fontHeliosExtC(200px);
+      text-transform: uppercase;
+      flex-shrink: 0;
+      width: 85%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: var(--gap);
+      animation: scroll 10s linear infinite;
+    }
+
+    @keyframes scroll {
+      to {
+        transform: translateX(calc(-100% - var(--gap)));
+      }
+    }
+  }
+
+  .tickerS {
+    position: absolute;
+    background-color: #000;
+    z-index: 100;
+    top: 110px;
+    padding-block: 8px;
+    overflow: hidden;
+    user-select: none;
+    transform: rotate(-9deg) translateX(-60px);
+    --gap: 35px;
+    display: flex;
+    gap: var(--gap);
+    min-height: 103px;
+
+    &__text {
+      z-index: 100;
+      @include fontHeliosExtC(72px);
+      text-transform: uppercase;
+      flex-shrink: 0;
+      width: 85%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: var(--gap);
+      animation: scroll 20s linear infinite;
+      background: -webkit-linear-gradient(0deg, #21fcff, #fd40ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes scroll {
+      to {
+        transform: translateX(calc(-100% - var(--gap)));
+      }
+    }
+  }
 }
 
 @media (max-width: 1440px) {
@@ -126,13 +202,33 @@
       left: 500px;
     }
   }
+
+  @media (max-width: 1250px) {
+    .game {
+      .ticker {
+        min-height: 200px;
+        top: -50px;
+        &__text {
+          font-size: 150px;
+        }
+      }
+
+      .tickerS {
+        min-height: 70px;
+        top: 170px;
+        &__text {
+          font-size: 50px;
+        }
+      }
+    }
+  }
 }
+
 @media (max-width: 1024px) {
   .game {
     min-height: 1567px;
 
     &__content {
-      padding-top: 0px;
       padding-bottom: 600px;
     }
 
@@ -174,6 +270,30 @@
       right: -670px;
       top: 630px;
     }
+
+    .ticker {
+      min-height: 80px;
+      top: -60px;
+      right: -700px;
+      &__text {
+        font-size: 120px;
+      }
+    }
+
+    .tickerS {
+      min-height: 50px;
+      top: 100px;
+      --gap: 10px;
+
+      &__text {
+        font-size: 30px;
+      }
+
+      &__star {
+        height: auto;
+        width: 25px;
+      }
+    }
   }
 }
 
@@ -182,6 +302,7 @@
     min-height: 1200px;
 
     &__content {
+      padding-top: 100px;
       padding-bottom: 400px;
     }
     &__info-text {
@@ -191,13 +312,13 @@
 
     &__info-wrapper {
       padding: 50px 0 120px;
-      max-width: 380px;
+      max-width: 360px;
     }
 
     &__info-container,
     &__info-container::before,
     &__info-container::after {
-      max-width: 380px;
+      max-width: 360px;
     }
 
     &__char1 {
@@ -232,6 +353,42 @@
     .e911 {
       right: -790px;
       top: 390px;
+    }
+
+    .ticker {
+      min-height: 110px;
+      top: -60px;
+      right: -400px;
+      &__text {
+        font-size: 80px;
+      }
+    }
+
+    .tickerS {
+      min-height: 25px;
+      top: 70px;
+      --gap: 5px;
+
+      &__text {
+        font-size: 18px;
+      }
+
+      &__star {
+        height: auto;
+        width: 15px;
+      }
+    }
+  }
+  @media (max-width: 390px) {
+    .game {
+      .ticker {
+        min-height: 110px;
+        top: -70px;
+        right: -400px;
+        &__text {
+          font-size: 50px;
+        }
+      }
     }
   }
 }

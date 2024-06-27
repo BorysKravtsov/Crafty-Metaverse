@@ -1,0 +1,204 @@
+.faq {
+  background-color: #090812;
+  color: #fff;
+  position: relative;
+  padding: 270px 20px 48px;
+
+  hr {
+    width: 100%;
+    max-width: 1204px;
+    margin: 61px 0 20px;
+  }
+
+  &__list {
+    margin-top: 42px;
+  }
+
+  &__title {
+    @include fontHeliosExtC(45px);
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  &__small-title {
+    @include fontJakarta-regular(20px);
+    text-align: center;
+    margin: 96px 0 17px;
+  }
+
+  &__container {
+    z-index: 1;
+    overflow: hidden;
+    --notchSize: 50px;
+    margin: 0 auto;
+    position: relative;
+    max-width: 1296px;
+    min-height: 1200px;
+    clip-path: polygon(
+      var(--notchSize) 0%,
+      100% 0%,
+      100% 100%,
+      0 100%,
+      0 var(--notchSize)
+    );
+    background: linear-gradient(
+        270deg,
+        rgba(58, 78, 255, 0) 0%,
+        rgba(156, 58, 255, 0.14) 100%
+      ),
+      url(/src/images/FAQ/faq-bg-lines.svg);
+  }
+
+  &__list-container {
+    height: 100%;
+    margin: 0 20px;
+  }
+
+  &__list {
+    @include flex(space-between, center, column);
+    height: 100%;
+    max-width: 1202px;
+    margin: 42px auto 0;
+  }
+
+  &__list-item {
+    max-width: 1182px;
+    width: 100%;
+    @include fontHeliosExtC(30px);
+    @include flex(space-between, center);
+  }
+
+  &__icon {
+    height: 34px;
+    width: 34px;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+
+  &__icon:hover {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(245deg);
+  }
+
+  &__list-text {
+    @include fontJakarta-light(23px);
+    display: none;
+    opacity: 70%;
+    line-height: 160%;
+    margin-bottom: 42px;
+  }
+
+  .blur {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .e244 {
+    position: absolute;
+    left: -362px;
+    top: -400px;
+  }
+
+  .e245 {
+    position: absolute;
+    right: -800px;
+    top: 270px;
+  }
+
+  .tickerS {
+    position: absolute;
+    background-color: #000;
+    z-index: 100;
+    top: 50px;
+    padding-block: 8px;
+    overflow: hidden;
+    user-select: none;
+    transform: rotate(6deg) translateX(-60px);
+    --gap: 35px;
+    display: flex;
+    gap: var(--gap);
+    min-height: 103px;
+
+    &__text {
+      z-index: 100;
+      @include fontHeliosExtC(72px);
+      text-transform: uppercase;
+      flex-shrink: 0;
+      width: 85%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: var(--gap);
+      animation: scroll 20s linear infinite;
+      background: -webkit-linear-gradient(0deg, #21fcff, #fd40ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes scroll {
+      to {
+        transform: translateX(calc(-100% - var(--gap)));
+      }
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .faq {
+    .tickerS {
+      min-height: 70px;
+      top: 150px;
+      &__text {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .faq {
+    padding-top: 120px;
+    &__container {
+      min-height: 770px;
+    }
+
+    &__list {
+      margin: 18px 0 0;
+    }
+
+    &__list-title {
+      font-size: 16px;
+    }
+
+    &__icon {
+      height: 16px;
+      width: 16px;
+    }
+
+    hr {
+      margin: 24px 0 20px;
+    }
+
+    &__list-text {
+      font-size: 16px;
+    }
+
+    .tickerS {
+      min-height: 25px;
+      top: 0px;
+      --gap: 5px;
+
+      &__text {
+        font-size: 18px;
+      }
+
+      &__star {
+        height: auto;
+        width: 15px;
+      }
+    }
+  }
+}

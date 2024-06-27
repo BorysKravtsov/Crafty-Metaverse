@@ -1,5 +1,5 @@
 export function initBlockToggle() {
-  const blocks = document.querySelectorAll('.block');
+    const blocks = document.querySelectorAll('.block');
 
   blocks.forEach(block => {
     const items = block.querySelectorAll('.block__list .item__list');

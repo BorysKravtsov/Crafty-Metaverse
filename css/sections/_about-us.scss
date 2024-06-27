@@ -1,7 +1,7 @@
 .about-us {
   background-image: url(../images/About-us/about-bg.jpg);
   height: 100vh;
-  min-height: 800px;
+  min-height: 1034px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -39,7 +39,7 @@
     top: -20px;
     left: 0px;
     position: absolute;
-    max-height: 585px;
+    min-height: 585px;
     height: 100%;
     width: 6px;
     background-color: #56ffeb;

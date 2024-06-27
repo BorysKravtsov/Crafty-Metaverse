@@ -3,15 +3,17 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 100%;
+  min-height: 1137px;
   padding-top: 148px;
+  position: relative;
 
   h3 {
     margin-bottom: 21px;
   }
 
-  h2 {
-    margin-bottom: 69px;
+  .container {
+    z-index: 10;
   }
 
   &__inner {
@@ -19,12 +21,14 @@
   }
 
   &__container {
-    @include flex(space-between, center);
+    @include flex(space-around, center);
+    flex-wrap: wrap;
   }
 
   &__item {
     @include flex(space-between, center, column);
-    min-height: 512px;
+    min-height: 571px;
+    margin: 0 25px;
   }
 
   &__name {
@@ -34,19 +38,19 @@
     text-align: center;
   }
 
-  .stan {
+  .stan-name {
     color: #56ffeb;
   }
 
-  .kwasi {
+  .kwasi-name {
     color: #2c4dff;
   }
 
-  .kwame {
+  .kwame-name {
     color: #bf3aff;
   }
 
-  .kojo {
+  .kojo-name {
     color: #fb41ff;
   }
 
@@ -54,5 +58,186 @@
     @include fontJakarta-medium(16px);
     opacity: 70%;
     text-align: center;
+  }
+
+  .stan-item,
+  .kwame-item {
+    margin-top: 165px;
+    min-width: 331px;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .kwasi-item,
+  .kojo-item {
+    margin-bottom: 165px;
+    min-width: 331px;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &__sm-container {
+    @include flex(space-between, center);
+    width: 235px;
+    bottom: -60px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      transform 0.5s ease-in-out,
+      opacity 0.5s ease-in-out;
+  }
+
+  &__sm {
+    width: 48.7px;
+    height: 48.7px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0px 4px 13px rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20.5px);
+    border-radius: 17px;
+
+    img {
+      display: block;
+      margin: auto;
+      width: 20px;
+      height: 100%;
+    }
+  }
+
+  .stan-item:hover,
+  .kwame-item:hover {
+    transform: translateY(-90px);
+  }
+
+  .kwasi-item:hover,
+  .kojo-item:hover {
+    transform: translateY(90px);
+  }
+
+  .team__item:hover .team__sm-container {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__kojo-card {
+    position: relative;
+  }
+
+  &__kojo-card::before {
+    content: '';
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    bottom: -21px;
+    right: 110px;
+    background-image: url(../images/star.svg);
+    z-index: 1;
+  }
+
+  .blur {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .e239 {
+    position: absolute;
+    right: -362px;
+    top: -400px;
+    left: auto;
+  }
+
+  .e241 {
+    position: absolute;
+    top: -50px;
+    left: -290px;
+  }
+
+  .e240 {
+    position: absolute;
+    top: -300px;
+    left: -990px;
+  }
+
+  .e242 {
+    display: none;
+    position: absolute;
+  }
+
+  .e917 {
+    display: none;
+    position: absolute;
+  }
+}
+
+@media (max-width: 801px) {
+  .team {
+    padding-top: 80px;
+
+    h2 {
+      margin-bottom: 91px;
+    }
+
+    .stan-item,
+    .kwame-item {
+      margin-top: 0;
+    }
+
+    .kwasi-item,
+    .kojo-item {
+      margin-bottom: 0;
+      flex-direction: column-reverse;
+    }
+
+    .stan-item:hover,
+    .kwame-item:hover,
+    .kwasi-item:hover,
+    .kojo-item:hover {
+      transform: translateY(-45px);
+    }
+
+    &__kojo-card::before {
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .e239 {
+      right: -682px;
+      top: -600px;
+    }
+    .e241 {
+      top: 340px;
+      left: -630px;
+    }
+
+    .e240 {
+      top: 700px;
+      left: -800px;
+      bottom: auto;
+      right: auto;
+    }
+
+    .e242 {
+      display: block;
+      bottom: -200px;
+      left: -150px;
+    }
+
+    .e917 {
+      display: block;
+      bottom: 0;
+      right: -400px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .team {
+    &__item {
+      margin: 0;
+    }
   }
 }

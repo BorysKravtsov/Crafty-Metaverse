@@ -99,10 +99,12 @@
     transition: transform 0.5s ease;
     overflow-y: auto;
 
-    .menu__container {
+    &__container {
       @include flex(space-between, center, column);
       min-height: 500px;
-      margin-top: 50px;
+      padding-top: 50px;
+      height: 100%;
+      background-color: #090812;
     }
 
     .nav__items {

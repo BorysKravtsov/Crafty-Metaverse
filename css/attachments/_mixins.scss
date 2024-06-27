@@ -21,6 +21,15 @@
   font-weight: 400;
   text-transform: none;
 }
+
+@mixin fontJakarta-light($fontSize: 20px, $color: #fff) {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: $color;
+  font-size: $fontSize;
+  font-weight: 300;
+  text-transform: none;
+}
+
 @mixin fontHeliosExtC($fontSize: 20px, $color: #fff) {
   font-family: 'HeliosExtC-Bold', sans-serif;
   color: $color;

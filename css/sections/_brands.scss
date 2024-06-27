@@ -7,16 +7,14 @@
     ),
     url(../images/Brands/bg-lines.png);
   background-repeat: repeat;
+  min-height: 1248px;
 
   h3 {
     padding: 112px 0 24px;
   }
-  h2 {
-    margin-bottom: 90px;
-  }
   &__container {
     width: 100%;
-    max-width: 1356px;
+    max-width: 1406px;
     margin: 0 auto;
   }
 
@@ -25,12 +23,12 @@
     @include flex(space-between, flex-start, row);
     flex-wrap: wrap;
     text-align: center;
+    padding-bottom: 50px;
   }
   .card-2 img {
     height: 412px;
   }
   .c3 {
-    padding-bottom: 80px;
     .brands__item-title {
       line-height: 280%;
     }
@@ -40,7 +38,7 @@
     max-width: 406px;
     min-height: 803px;
     margin-bottom: 120px;
-    margin: 0 20px;
+    margin: 90px 20px 0;
   }
 
   &__item-title {
@@ -92,6 +90,39 @@
     left: 0;
     z-index: -1;
   }
+
+  .c1::before {
+    content: '';
+    position: absolute;
+    height: 1117px;
+    width: 1166px;
+    top: -300px;
+    left: -300px;
+    background-image: url(../images/blur/brands/card-1-blur.png);
+    z-index: -1;
+  }
+
+  .c2::before {
+    content: '';
+    position: absolute;
+    height: 1117px;
+    width: 1166px;
+    top: -300px;
+    left: -300px;
+    background-image: url(../images/blur/brands/card-2-blur.png);
+    z-index: -1;
+  }
+
+  .c3::before {
+    content: '';
+    position: absolute;
+    height: 1117px;
+    width: 1166px;
+    top: -300px;
+    left: -300px;
+    background-image: url(../images/blur/brands/card-3-blur.png);
+    z-index: -1;
+  }
 }
 
 @media (max-width: 1337px) {
@@ -99,13 +130,26 @@
     &__items-container {
       @include flex(space-around, flex-start, row);
     }
-    .c3 {
-      margin-top: 100px;
-    }
   }
 }
 @media (max-width: 891px) {
   .c2 {
     margin-top: 100px;
+  }
+}
+
+@media (max-width: 891px) {
+  .brands {
+    &__item {
+      margin: 90px 10px 0;
+    }
+
+    .line-gradient {
+      width: 350px;
+    }
+
+    &__item {
+      max-width: 350px;
+    }
   }
 }
