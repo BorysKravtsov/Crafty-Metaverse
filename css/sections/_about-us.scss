@@ -11,7 +11,7 @@
 
   position: relative;
   z-index: 1;
-  & .container {
+  .container {
     width: 100%;
     @include flex(center, center);
   }
@@ -157,7 +157,7 @@
     background: transparent;
     background-color: #01001f;
     .container {
-      padding: 58px 0 77px;
+      padding: 58px 20px 77px;
     }
     &__text {
       max-width: 332px;

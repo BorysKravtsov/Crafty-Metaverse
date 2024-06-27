@@ -2,10 +2,15 @@ body {
   background-color: black;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  position: relative;
 }
 
 html {
   overflow-x: hidden;
+}
+
+body.lock-scroll {
+  overflow-y: hidden !important;
 }
 
 .main {
@@ -28,10 +33,6 @@ a:active {
 p {
   @include fontJakarta-regular(20px);
   line-height: 160%;
-}
-
-.lock-scroll {
-  overflow: hidden;
 }
 
 .container {
