@@ -3,23 +3,26 @@ export function initSectionObserver() {
   const navItems = document.querySelectorAll('nav ul li');
 
   const options = {
-    threshold: 0.33
+    threshold: 0.3
   };
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      navItems.forEach(item => {
-        if (
-          item.querySelector('a').getAttribute('href').substring(1) ===
-          entry.target.id
-        ) {
-          if (entry.isIntersecting) {
+      if (entry.isIntersecting) {
+        navItems.forEach(item => {
+          item.classList.remove('active');
+        });
+
+        navItems.forEach(item => {
+          const sectionId = item
+            .querySelector('a')
+            .getAttribute('href')
+            .substring(1);
+          if (sectionId === entry.target.id) {
             item.classList.add('active');
-          } else {
-            item.classList.remove('active');
           }
-        }
-      });
+        });
+      }
     });
   }, options);
 
