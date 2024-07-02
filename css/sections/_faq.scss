@@ -23,7 +23,7 @@
   &__small-title {
     @include fontJakarta-regular(20px);
     text-align: center;
-    margin: 96px 0 17px;
+    margin: 44px 0 17px;
   }
 
   &__container {
@@ -34,6 +34,7 @@
     position: relative;
     max-width: 1296px;
     min-height: 1200px;
+    --notchSize: 50px;
     clip-path: polygon(
       var(--notchSize) 0%,
       100% 0%,
@@ -41,15 +42,61 @@
       0 100%,
       0 var(--notchSize)
     );
-    background: linear-gradient(
-        270deg,
-        rgba(58, 78, 255, 0) 0%,
-        rgba(156, 58, 255, 0.14) 100%
-      ),
-      url(/src/images/FAQ/faq-bg-lines.svg);
+    padding-top: 52px;
   }
 
-  &__list-container {
+  &__span-block {
+    z-index: 1;
+    top: 2px;
+    left: 2px;
+    --notchSize: 50px;
+    clip-path: polygon(
+      var(--notchSize) 0%,
+      100% 0%,
+      100% 100%,
+      0 100%,
+      0 var(--notchSize)
+    );
+    position: absolute;
+    width: calc(100% - 4px);
+    height: 56px;
+    background: url(../images/FAQ/faq-bg-lines.svg),
+      linear-gradient(270deg, #2c194a, #2c194a);
+    background-position-y: 50px;
+  }
+
+  &__container::before {
+    content: '';
+    position: absolute;
+    height: calc(100% - 52px);
+    width: 100%;
+    z-index: -1;
+    border: 2px solid rgb(160, 52, 217);
+    border-top: none;
+    background: url(../images/FAQ/faq-bg-lines.svg),
+      linear-gradient(270deg, #2c194a, #2c194a);
+  }
+
+  &__container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: calc(100% + 10px);
+    height: 55px;
+
+    clip-path: polygon(
+      var(--notchSize) 0%,
+      100% 0%,
+      100% 100%,
+      0 100%,
+      0 var(--notchSize)
+    );
+    background: #a034d9;
+  }
+
+  &__container &__list-container {
     height: 100%;
     margin: 0 20px;
   }
@@ -59,6 +106,12 @@
     height: 100%;
     max-width: 1202px;
     margin: 42px auto 0;
+  }
+
+  &__list-title {
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 140%;
   }
 
   &__list-item {

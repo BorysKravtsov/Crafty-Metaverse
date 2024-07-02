@@ -101,6 +101,12 @@ p {
   opacity: 1;
 }
 
+.background__media-footer {
+  background: #090812 url(../images/Media/media-bg.svg);
+  background-position: center;
+  background-size: cover;
+}
+
 @media (max-width: 768px) {
   .btn {
     padding: 15px 44px;

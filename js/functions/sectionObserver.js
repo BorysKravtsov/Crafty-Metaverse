@@ -7,8 +7,11 @@ export function initSectionObserver() {
   };
 
   const observer = new IntersectionObserver(entries => {
+    let anySectionIntersecting = false;
+
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+        anySectionIntersecting = true;
         navItems.forEach(item => {
           item.classList.remove('active');
         });
@@ -24,6 +27,10 @@ export function initSectionObserver() {
         });
       }
     });
+
+    if (!anySectionIntersecting) {
+      navItems.forEach(item => item.classList.remove('active'));
+    }
   }, options);
 
   sections.forEach(section => {
