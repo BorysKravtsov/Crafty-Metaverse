@@ -119,6 +119,10 @@ p {
   opacity: 1;
 }
 
+.blur {
+  pointer-events: none;
+}
+
 .background__media-footer {
   background: #090812 url(../images/Media/media-bg.svg);
   background-position: center;
@@ -2325,7 +2329,7 @@ p {
   margin: 44px 0 17px;
 }
 .faq__container {
-  z-index: 1;
+  z-index: 0;
   overflow: hidden;
   --notchSize: 50px;
   margin: 0 auto;
@@ -2345,8 +2349,8 @@ p {
   position: absolute;
   width: calc(100% - 4px);
   height: 56px;
-  background: url(../images/FAQ/faq-bg-lines.svg), linear-gradient(270deg, #2c194a, #2c194a);
-  background-position-y: 50px;
+  background: url(../images/FAQ/faq-bg-lines.svg), linear-gradient(90deg, #2c194a, #090812);
+  background-position-y: 2px;
 }
 .faq__container::before {
   content: "";
@@ -2356,7 +2360,7 @@ p {
   z-index: -1;
   border: 2px solid rgb(160, 52, 217);
   border-top: none;
-  background: url(../images/FAQ/faq-bg-lines.svg), linear-gradient(270deg, #2c194a, #2c194a);
+  background: url(../images/FAQ/faq-bg-lines.svg), linear-gradient(90deg, #2c194a, #090812);
 }
 .faq__container::after {
   content: "";
@@ -2425,7 +2429,7 @@ p {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 0;
+  z-index: 2;
 }
 .faq .e244 {
   position: absolute;

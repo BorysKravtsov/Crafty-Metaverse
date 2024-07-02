@@ -101,6 +101,10 @@ p {
   opacity: 1;
 }
 
+.blur {
+  pointer-events: none;
+}
+
 .background__media-footer {
   background: #090812 url(../images/Media/media-bg.svg);
   background-position: center;
